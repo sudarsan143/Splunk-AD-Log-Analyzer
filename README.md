@@ -1,2 +1,6 @@
-# Splunk-AD-Log-Analyzer
-A Splunk-based project analyzing Active Directory authentication logs (4624/4625) to detect brute-force, password spraying, and suspicious logon behavior. Includes datasets, SPL searches, use cases, and a beginner-friendly SOC investigation playbook.
+# 🛡️ Splunk AD Log Analyzer 
+
+A complete cybersecurity SIEM project focused on analyzing Windows Active Directory Security Logs (Event ID 4624 & 4625) to detect brute-force attacks, password spray attempts, lateral movement, and abnormal authentication patterns inside an enterprise environment.
+
+This lab uses Splunk to ingest, analyze, visualize, and investigate AD authentication logs generated from real-world-like datasets.
+
