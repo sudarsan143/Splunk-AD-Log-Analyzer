@@ -23,7 +23,7 @@ To build a **Splunk-based analysis workflow** that helps in understanding normal
 ### 🕵️ Retrieve all AD logs  
 ```spl
 index=ad_logs
-| stats count by EventID Outcome AccountName
+| stats count by EventID  AccountName
 ```
 
 ---
