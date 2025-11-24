@@ -13,8 +13,8 @@ To build a **Splunk-based analysis workflow** that helps in understanding normal
 
 ## 🧩 Lab Setup  
 - **Tool:** Splunk cloud  
-- **Dataset:** `AD_LOGS`  
-- **Sourcetype:** `syslog`  
+- **Dataset:** `AD_logs` 
+- **Input:** `Upload CSV`  
 
 ---
 
