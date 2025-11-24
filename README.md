@@ -76,12 +76,27 @@ source="AD_LOGS.csv" index="main" sourcetype="csv"
 | stats count by AccountName SourceIP LogonType
 | sort -count
 ```
+---
+
+## 👨‍💻 Trigger an alert 
+### Trigger an alert when the same AccountName generates five or more failed authentication attempts (EventID 4625) within the monitored dataset. This helps identify potential brute-force activity or repeated unauthorized login attempts on a specific user account.
+```spl
+source="AD_LOGS.csv" index="main" sourcetype="csv" EventID="4625" 
+| stats count by AccountName
+| where count >= 5
+```
 
 ---
 
 ## 🖼 Dashboard Screenshots  
 
 <img width="1920" height="1020" alt="Screenshot 2025-11-02 190203" src="https://github.com/user-attachments/assets/ba81c651-1472-4ff1-bab6-bfa8367c4f7d" />
+<img width="1920" height="1020" alt="Screenshot 2025-11-02 191955" src="https://github.com/user-attachments/assets/e216212d-a081-4452-9430-6ce938701d9e" />
+<img width="1920" height="1020" alt="Screenshot 2025-11-02 192012" src="https://github.com/user-attachments/assets/639649db-6170-4c6a-a507-e6066b167975" />
+<img width="1920" height="1020" alt="Screenshot 2025-11-02 192335" src="https://github.com/user-attachments/assets/347b8921-b440-4ccc-8ddb-99fb863bb3fb" />
+<img width="1920" height="1020" alt="Screenshot 2025-11-02 192437" src="https://github.com/user-attachments/assets/046b42c0-652b-4614-8f7d-2fbe40ce447d" />
+<img width="1920" height="1020" alt="Screenshot 2025-11-02 192537" src="https://github.com/user-attachments/assets/2ec40af9-2604-4711-a342-5da6e8812c94" />
+<img width="1920" height="1020" alt="Screenshot 2025-11-02 192757" src="https://github.com/user-attachments/assets/8c0f1c1c-95e3-4ffa-8770-90c65a27e481" />
 
 
 ---
